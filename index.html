@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+
+    <section class="container">
+        <h1>QR Code Generator</h1>
+        <div class="action">
+            <form>
+                <input required type="text" placeholder="Write ...">
+                <button type="submit" id="generate">Generate</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const container = document.querySelector(".container")
+        const action_section = container.querySelector(".action")
+
+        const form = container.querySelector("form")
+        const input = container.querySelector("input")
+
+        const QR_Element = document.createElement("div")
+        QR_Element.setAttribute("class" , "qr_code")
+
+        function generate(){
+            alert()
+        }
+
+        let img;
+
+        form.addEventListener("submit" , async e => {
+            e.preventDefault()
+            if(img){
+                QR_Element.removeChild(img)
+            }
+
+            img = document.createElement("img")
+            img.src = `https://api.qrserver.com/v1/create-qr-code/?data=${input.value}`
+
+
+            QR_Element.appendChild(img)
+            container.insertBefore(QR_Element, action_section)
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,87 @@
+*{
+    padding:0;
+    margin:0
+}
+
+html{
+    user-select: none;
+}
+
+body{
+    height:100vh;
+    width:100vw;
+    background:rgb(54, 54, 54);
+    overflow:hidden;
+    display:grid;
+    place-content: center;
+}
+
+.container{
+    position:relative;
+    min-height:20vh;
+    min-width:30vw;
+    background:white;
+    border-radius:20px;
+    display:flex;
+    flex-direction: column; 
+    align-items:center;
+    justify-content:space-evenly;
+    padding:20px;
+}
+
+.container h1{ 
+    min-height:100px;
+    display:grid;
+    place-content: center;
+}
+
+.container .qr_code{ 
+    min-height:400px;
+    width:100%;
+    display:grid;
+    place-content: center;
+}
+
+.container .qr_code img{
+    background-color:white;
+    padding:1px;
+    border:solid 1px black
+}
+
+.container .action{ 
+    min-height:100px;
+    width:80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.container .action input{ 
+    padding:10px;
+    font-size:1.5rem;
+    outline:none
+}
+
+.container .action button{
+    padding:10px;
+    font-size:1.5rem;
+    outline:none;
+    border:none;
+    background:blue;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+    transition:.5s
+}
+
+.container .action button:hover{
+    transform:scale(1.1)
+}
