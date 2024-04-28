@@ -51,23 +51,21 @@ body{
 .container .action{ 
     min-height:100px;
     width:80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 form{
     width:100%;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     gap:10px;
 }
 
 .container .action input{ 
     padding:10px;
     font-size:1rem;
-    outline:none
+    outline:none;
+    flex-shrink:1
 }
 
 .container .action button{
@@ -79,7 +77,8 @@ form{
     border-radius:5px;
     color:white;
     cursor:pointer;
-    transition:.5s
+    transition:.5s;
+    flex-shrink:0;
 }
 
 .container .action button:hover{
