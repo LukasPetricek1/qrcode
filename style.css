@@ -19,7 +19,7 @@ body{
 .container{
     position:relative;
     min-height:20vh;
-    min-width:30vw;
+    max-width:60vw;
     background:white;
     border-radius:20px;
     display:flex;
@@ -66,13 +66,13 @@ form{
 
 .container .action input{ 
     padding:10px;
-    font-size:1.5rem;
+    font-size:1rem;
     outline:none
 }
 
 .container .action button{
     padding:10px;
-    font-size:1.5rem;
+    font-size:1rem;
     outline:none;
     border:none;
     background:blue;
